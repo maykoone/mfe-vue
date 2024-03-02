@@ -12,9 +12,9 @@ module.exports = defineConfig({
       new ModuleFederationPlugin({
         name: 'application_b',
         filename: 'remoteEntry.js',
-        library: { type: 'var', name: 'other' },
+        library: { type: 'var', name: 'application_b' },
         exposes: {
-          './HelloWorldFromB': './src/components/HelloWorld',
+          './HelloWorld': './src/components/HelloWorld',
         },
         shared: require('./package.json').dependencies,
       }),

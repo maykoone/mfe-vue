@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorldFromB msg="Hello from Application A"/>
+    <HelloWorld msg="Hello from Application A"/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   name: 'App',
   components: {
-    HelloWorldFromB: () => import("application_b/HelloWorldFromB"),
+    HelloWorld: () => import("application_b/HelloWorld"),
   }
 }
 </script>
