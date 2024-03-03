@@ -13,7 +13,7 @@ module.exports = defineConfig({
         name: 'application_a',
         filename: 'remoteEntry.js',
         remotes: {
-          application_b: 'application_b@http://localhost:9001/remoteEntry.js',
+          // application_b: 'application_b@http://localhost:9001/remoteEntry.js',
         },
         shared: require('./package.json').dependencies,
       }),

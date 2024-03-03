@@ -6,11 +6,16 @@
 </template>
 
 <script>
+import { importRemote } from '@module-federation/utilities';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld: () => import("application_b/HelloWorld"),
+    HelloWorld: () => importRemote({
+      url: 'http://localhost:9001',
+      scope: 'application_b',
+      module: 'HelloWorld'
+    }),
   }
 }
 </script>
