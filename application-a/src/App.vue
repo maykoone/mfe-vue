@@ -7,6 +7,7 @@
 
 <script>
 import { importRemote } from '@module-federation/utilities';
+import { APP_MESSAGE } from "@/constants"; // this will override the remote module
 
 export default {
   name: 'App',
@@ -16,6 +17,11 @@ export default {
       scope: 'application_b',
       module: 'HelloWorld'
     }),
+  },
+  data () {
+    return {
+      appMessage: APP_MESSAGE
+    }
   }
 }
 </script>

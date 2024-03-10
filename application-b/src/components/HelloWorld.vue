@@ -1,15 +1,22 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ appMessage }}</h1>
     <p>Application B microfrontend</p>
   </div>
 </template>
 
 <script>
+import { APP_MESSAGE } from "@/constants";
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  computed: {
+    appMessage() {
+      return `${APP_MESSAGE} ${this.msg}`;
+    }
   }
 }
 </script>
