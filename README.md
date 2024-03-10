@@ -1,19 +1,12 @@
 # Getting Started Module Federation with Vue 2
 
-Playing Module Federation with Vue2. Application A consumes a component exposed by Application B.
+Playing with Module Federation with Vue2. Application A consumes a component exposed by Application B.
 
-Start Application B
+## Running
 
-```bash
-cd application-b
-yarn install
-yarn serve
-```
-
-Start Application A
+This will install the dependencies and run both applications. `application-a` on port 8080 and `application-b` on port 9001
 
 ```bash
-cd application-b
 yarn install
 yarn serve
 ```

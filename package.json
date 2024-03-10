@@ -1,0 +1,16 @@
+{
+  "workspaces": [
+    "./application-a",
+    "./application-b"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "concurrently \"cd application-a; yarn build\" \"cd application-b; yarn build\"",
+    "serve": "concurrently \"cd application-a; yarn serve\" \"cd application-b; yarn serve\""
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1",
+    "concurrently": "^5.3.0"
+  },
+  "name": "mfe-vue"
+}
