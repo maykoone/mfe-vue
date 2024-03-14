@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Hello from Application A"/>
+    <HelloWorldApp />
   </div>
 </template>
 
@@ -17,6 +18,11 @@ export default {
       scope: 'application_b',
       module: 'HelloWorld'
     }),
+    HelloWorldApp: () => importRemote({
+      url: 'http://localhost:9002',
+      scope: 'hello_world',
+      module: 'HelloWorldApp'
+    })
   },
   data () {
     return {
